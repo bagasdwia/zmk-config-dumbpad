@@ -4,6 +4,6 @@
 if SHIELD_DUMBPAD
 
 config ZMK_KEYBOARD_NAME
-    default "Dumbpad"
+    default "dumbpad"
 
 endif
