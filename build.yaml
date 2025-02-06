@@ -21,5 +21,3 @@
 include:
   - board: nrf52840_m2
     shield: dumbpadinclude:
-  - board: nrf52840_m2
-    shield: two_percent_milk
