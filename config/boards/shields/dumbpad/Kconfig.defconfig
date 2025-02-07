@@ -55,6 +55,8 @@ source "subsys/logging/Kconfig.template.log_config"
 menuconfig ZMK_STUDIO_LOCKING
     bool "Lock Support"
 
+endif
+
 if ZMK_STUDIO_LOCKING
 
 config ZMK_STUDIO_LOCK_IDLE_TIMEOUT_SEC
