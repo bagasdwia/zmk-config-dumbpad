@@ -38,7 +38,12 @@
           , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
           ;
     };
-
+// ---------------------------------------
+//          BSPC |  7    |  8  |  9   | 
+//          EQUAL|  4    |  5  |  6   | 
+//          MINUs|  1    |  2  |  3   |      
+// | TO(1) | ESC |  0    |  .  | ENT  |
+// ---------------------------------------
     };
         left_encoder: encoder_left {
         compatible = "alps,ec11";
