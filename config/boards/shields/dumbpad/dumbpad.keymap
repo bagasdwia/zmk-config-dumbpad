@@ -7,28 +7,10 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+#DEFINE DEFAULT 0
+#DEFINE NAV 1
 
 / {
-    behaviors {
-        bhm: balanced_homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;    // <---[[moderate duration]]
-            quick-tap-ms = <0>;
-            flavor = "balanced";
-            bindings = <&kp>, <&kp>;
-        };
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOMEROW_MODS";
-            #binding-cells = <2>;
-            tapping-term-ms = <250>;
-            flavor = "tap-preferred";
-            bindings = <&kp>, <&kp>;
-        };
-    };
-
         keymap {
                 compatible = "zmk,keymap";
 
@@ -52,20 +34,20 @@
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
-            nav_layer {
+                nav_layer {
 // --------------------------------------
 //          | 1    | 2  |  3  | 4  |
 //          | Q    | W  |  E  | R  |
 //          | A    | S  |  D  | F  |       
 // | TO(0)  | ESC  | C  |  B  | T  |
 // --------------------------------------
-        bindings = <
+                        bindings = <
            &kp 1    &kp 2   &kp 3   &kp 4
            &kp Q    &kp W   &kp E   &kp R
            &kp A    &kp S   &kp D   &kp F
     &to    &to ESC  &kp C   &kp B   &kp T
     >;
-
-         };
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;      
+        };
     };
 };
