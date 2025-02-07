@@ -69,15 +69,10 @@
         status = "okay";
     };
 
-    &sensors {
-    left_config {
-        triggers-per-rotation = <18>;
+    sensors {
+        compatible = "zmk,keymap-sensors";
+        sensors = <&left_encoder &right_encoder>;
     };
-
-    right_config {
-        triggers-per-rotation = <24>;
-    };
-};
 };
 
 
