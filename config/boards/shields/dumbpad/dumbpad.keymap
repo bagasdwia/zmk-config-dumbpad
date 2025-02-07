@@ -26,7 +26,7 @@
           &kp MINUS &kp N1  &kp N2 &kp N3  
     &mo 1 &kp ESC   &kp DOT &kp N0 &mt RSHFT RET
     >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
+    
         };
 
                 nav_layer {
@@ -42,7 +42,7 @@
           &kp A  &kp S   &kp D   &kp F
     &mo 0 &to ESC  &kp C   &kp B   &kp T
     >;
-        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;      
+        
         };
     };
 };
