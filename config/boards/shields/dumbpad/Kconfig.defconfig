@@ -44,4 +44,4 @@ endchoice
 
 endif LVGL
 
-endif
+endif SHIELD_DUMBPAD
