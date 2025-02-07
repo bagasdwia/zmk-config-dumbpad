@@ -3,7 +3,7 @@ id: dumbpad
 name: Dumbpad Macropad
 type: shield
 url: 
-requires: [pro_micro]/
+requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
