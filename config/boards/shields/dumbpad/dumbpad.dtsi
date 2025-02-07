@@ -35,18 +35,27 @@
         // #define MATRIX_ROW_PINS { D4, C6, D7, E6}
 
         row-gpios 
-          = <&pro_micro 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-          , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-          , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-          , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          = <&pro_micro D17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          , <&pro_micro D16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          , <&pro_micro D15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          , <&pro_micro D14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
           ;
+
+        col-gpios 
+          = <&pro_micro D5 GPIO_ACTIVE_HIGH>
+          , <&pro_micro D13 GPIO_ACTIVE_HIGH>
+          , <&pro_micro D12 GPIO_ACTIVE_HIGH>
+          , <&pro_micro D11 GPIO_ACTIVE_HIGH>
+          , <&pro_micro D10 GPIO_ACTIVE_HIGH>
+          ;
+          
     };
 
     left_encoder: encoder_left {
         compatible = "alps,ec11";
         label = "LEFT_ENCODER";
-        a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro D8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro D9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
         status = "disabled";
     };
@@ -54,8 +63,8 @@
     right_encoder: encoder_right {
         compatible = "alps,ec11";
         label = "RIGHT_ENCODER";
-        a-gpios = <&pro_micro 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        a-gpios = <&pro_micro D8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+        b-gpios = <&pro_micro D9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
         resolution = <4>;
         status = "disabled";
     };
