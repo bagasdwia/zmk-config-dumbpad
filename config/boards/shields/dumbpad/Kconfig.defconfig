@@ -6,29 +6,6 @@ if SHIELD_DUMBPAD
 config ZMK_KEYBOARD_NAME
     default "dumbpad"
 
-if ZMK_DISPLAY
-
-config I2C
-  default y
-
-config SSD1306
-  default y
-
-if LVGL
-
-config LV_Z_VDB_SIZE
-  default 64
-
-config LV_DPI_DEF
-  default 148
-
-config LV_Z_BITS_PER_PIXEL
-  default 1
-
-choice LV_COLOR_DEPTH
-  default LV_COLOR_DEPTH_1
-endchoice
-
 if EC11
 
 choice EC11_TRIGGER_MODE
@@ -70,9 +47,5 @@ config EC11_THREAD_STACK_SIZE
       Stack size of thread used by the driver to handle interrupts.
 
 endif # EC11
-
-endif # LVGL
-
-endif # ZMK_DISPLAY
 
 endif #SHIELD_DUMBPAD
