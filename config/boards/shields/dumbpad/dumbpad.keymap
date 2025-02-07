@@ -13,10 +13,10 @@
                 compatible = "zmk,keymap";
 
 // ---------------------------------------
-//           | 7      |  8  |  9  | bscp |
-//           | 4      |  5  |  6  | EQUAL|
-//           | 1      |  2  |  3  | MINUs|       
-// | TO(1)   | ESC    |  0  |  .  | ENT  |
+//         | 7    |  8  |  9    | bscp |
+//         | 4    |  5  |  6    | EQUAL|
+//         | 1    |  2  |  3    | MINUs|       
+// | TO(1) | ES   |  0  |  .    | ENT  |
 // ---------------------------------------
 
                 default_layer {
@@ -31,16 +31,16 @@
 
                 nav_layer {
 // --------------------------------------
-//          | 1    | 2  |  3  | 4  |
-//          | Q    | W  |  E  | R  |
-//          | A    | S  |  D  | F  |       
-// | TO(0)  | ESC  | C  |  B  | T  |
+//       | 1    |  2    |   3  |   4  |
+//       | Q    |  W    |   E  |   R  |
+//       | A    |  S    |   D  |   F  |       
+// |TO(0)| ESC  |  C    |   B  |   T  |
 // --------------------------------------
                         bindings = <
            &kp 1    &kp 2   &kp 3   &kp 4
            &kp Q    &kp W   &kp E   &kp R
            &kp A    &kp S   &kp D   &kp F
-    &to    &to ESC  &kp C   &kp B   &kp T
+    &to 0  &to ESC  &kp C   &kp B   &kp T
     >;
         sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;      
         };
