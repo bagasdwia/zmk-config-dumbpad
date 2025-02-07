@@ -7,8 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-/DEFINE DEFAULT 0
-/DEFINE NAV 1
 
 / {
         keymap {
