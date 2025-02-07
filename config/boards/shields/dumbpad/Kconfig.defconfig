@@ -46,8 +46,6 @@ config EC11_THREAD_STACK_SIZE
     help
       Stack size of thread used by the driver to handle interrupts.
 
-endif # EC11
-
 if ZMK_STUDIO
 
 module = ZMK_STUDIO
@@ -67,6 +65,8 @@ config ZMK_STUDIO_LOCK_ON_DISCONNECT
     bool "Lock On Disconnect"
     default y
 
+endif # EC11
+
 endif # ZMK_STUDIO
 
-endif #SHIELD_DUMBPAD
+endif # SHIELD_DUMBPAD
