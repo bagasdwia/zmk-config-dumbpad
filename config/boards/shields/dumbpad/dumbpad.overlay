@@ -16,22 +16,54 @@
         wakeup-source;
 
         diode-direction = "col2row";
-        
+
         col-gpios 
           = <&pro_micro 5 GPIO_ACTIVE_HIGH>
-          , <&pro_micro 13 GPIO_ACTIVE_HIGH>
-          , <&pro_micro 12 GPIO_ACTIVE_HIGH>
-          , <&pro_micro 11 GPIO_ACTIVE_HIGH>
+          , <&pro_micro 15 GPIO_ACTIVE_HIGH>
+          , <&pro_micro 14 GPIO_ACTIVE_HIGH>
+          , <&pro_micro 16 GPIO_ACTIVE_HIGH>
           , <&pro_micro 10 GPIO_ACTIVE_HIGH>
           ;
 
         row-gpios 
-          = <&pro_micro 17 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-          , <&pro_micro 16 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-          , <&pro_micro 15 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-          , <&pro_micro 14 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          = <&pro_micro 21 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          , <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          , <&pro_micro 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+          , <&pro_micro 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
           ;
 
-          
+// ---------------------------------------
+//         | 7    |  8  |  9    | bscp |
+//         | 4    |  5  |  6    | EQUAL|
+//         | 1    |  2  |  3    | MINUs|       
+// | TO(1) | ES   |  0  |  .    | ENT  |
+// ---------------------------------------
+
+                default_layer {
+                        bindings = <
+           &kp N7  &kp N8 &kp N9  &kp BSPC
+           &kp N4  &kp N5 &kp N6  &kp EQUAL
+           &kp N1  &kp N2 &kp N3  &kp MINUS
+    &to 1  &kp ESC &kp N0 &kp DOT &mt RSHFT RET
+    >;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+                nav_layer {
+// --------------------------------------
+//       | 1    |  2    |   3  |   4  |
+//       | Q    |  W    |   E  |   R  |
+//       | A    |  S    |   D  |   F  |       
+// |TO(0)| ESC  |  C    |   B  |   T  |
+// --------------------------------------
+                        bindings = <
+           &kp 1    &kp 2   &kp 3   &kp 4
+           &kp Q    &kp W   &kp E   &kp R
+           &kp A    &kp S   &kp D   &kp F
+    &to 0  &to ESC  &kp C   &kp B   &kp T
+    >;
+        sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;      
+        };
     };
+          
 };
