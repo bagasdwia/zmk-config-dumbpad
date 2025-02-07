@@ -9,8 +9,8 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns <5>;
-        rows <4>;
+        columns =<5>;
+        rows = <4>;
 
 // -------------------------------------
 //         | 7    |  8  |  9  | bscp |
