@@ -28,7 +28,7 @@
    
     sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
         };
-
+ 
                 nav_layer {
 // --------------------------------------
 //       | 1    |  2    |   3  |   4  |
@@ -41,8 +41,7 @@
           &kp Q    &kp W   &kp E   &kp R
           &kp A    &kp S   &kp D   &kp F
     &to 0 &kp ESC  &kp C   &kp B   &kp T
-    
-    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;    
-        };
     };
-};
+    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;    
+    };
+ };
