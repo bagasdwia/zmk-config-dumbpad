@@ -9,8 +9,8 @@
 
     default_transform: keymap_transform_0 {
         compatible = "zmk,matrix-transform";
-        columns =<5>;
-        rows = <4>;
+        columns =<4>;
+        rows = <5>;
 
 // -------------------------------------
 //         | 7    |  8  |  9  | BSCP |
@@ -53,7 +53,7 @@
         sensors {
         compatible = "alps,ec11";
         sensors = <&left_encoder &right_encoder>;
-        triggers-per-rotation = <20>;
+        triggers-per-rotation = <5>;
     };
 
 };

@@ -48,4 +48,25 @@ config EC11_THREAD_STACK_SIZE
 
 endif # EC11
 
+if ZMK_STUDIO
+
+module = ZMK_STUDIO
+module-str = zmk_studio
+source "subsys/logging/Kconfig.template.log_config"
+
+menuconfig ZMK_STUDIO_LOCKING
+    bool "Lock Support"
+
+if ZMK_STUDIO_LOCKING
+
+config ZMK_STUDIO_LOCK_IDLE_TIMEOUT_SEC
+    int "Idle Timeout"
+    default 600
+
+config ZMK_STUDIO_LOCK_ON_DISCONNECT
+    bool "Lock On Disconnect"
+    default y
+
+endif # ZMK_STUDIO
+
 endif #SHIELD_DUMBPAD
