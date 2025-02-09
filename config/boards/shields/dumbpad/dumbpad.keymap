@@ -31,6 +31,8 @@
         };
     };
 
+    encoders {
+        compatible = "zmk,encoders";    
     encoder_1: encoder1 {
         zmk,bindings = <&inc_dec_kp &kp VOLU &kp VOLD>;
     };
@@ -38,4 +40,5 @@
     encoder_2: encoder2 {
         zmk,bindings = <&inc_dec_kp &kp PGUP &kp PGDN>;
     };
+  };
 };
