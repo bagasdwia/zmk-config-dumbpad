@@ -31,15 +31,12 @@
 
     encoders {
         compatible = "zmk,encoders";    
-        #address-cells = <1>;
-        #size-cells = <0>;
 
         encoder_1: encoder1 {
             compatible = "zmk,behavior-encoder";
             gpios = <&pro_micro 9 GPIO_PULL_UP GPIO_ACTIVE_LOW>,
                     <&pro_micro 8 GPIO_PULL_UP GPIO_ACTIVE_LOW>;
             label = "Encoder 1";
-            zmk,bindings = <&inc_dec_kp>, <&kp VOLU>, <&kp VOLD>;
         };
 
         encoder_2: encoder2 {
@@ -47,7 +44,6 @@
             gpios = <&pro_micro 7 GPIO_PULL_UP GPIO_ACTIVE_LOW>,
                     <&pro_micro 6 GPIO_PULL_UP GPIO_ACTIVE_LOW>;
             label = "Encoder 2";
-            zmk,bindings = <&inc_dec_kp>, <&kp PGUP>, <&kp PGDN>;
         };
     };
  };
