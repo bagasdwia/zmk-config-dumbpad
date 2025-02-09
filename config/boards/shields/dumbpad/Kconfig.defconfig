@@ -10,8 +10,6 @@ config ZMK_BEHAVIOR_ENCODER
     bool "Enable encoder support"
     default y
 
-endif
-
 if ZMK_STUDIO
 
 module = ZMK_STUDIO
@@ -23,4 +21,4 @@ menuconfig ZMK_STUDIO_LOCKING
 
 endif
 
-endif # SHIELD_DUMBPAD
+endif #SHIELD_DUMBPAD
