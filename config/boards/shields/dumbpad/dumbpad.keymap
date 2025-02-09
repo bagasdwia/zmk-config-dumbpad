@@ -31,11 +31,11 @@
         };
     };
 
-    &encoder1 {
+    encoder1: encoder {
         binding = <&inc_dec_volume>;
     };
 
-    &encoder2 {
+    encoder2: encoder {
         binding = <&inc_dec_scroll>;
     };
 };
