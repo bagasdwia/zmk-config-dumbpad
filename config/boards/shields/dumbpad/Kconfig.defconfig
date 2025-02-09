@@ -6,4 +6,13 @@ if SHIELD_DUMBPAD
 config ZMK_KEYBOARD_NAME
     default "dumbpad"
 
+config ZMK_BEHAVIOR_ENCODER
+    bool "Enable encoder support"
+    default y
+
+config ZMK_BLE_HOG
+    bool "Enable BLE HID over GATT"
+    default y
+
+
 endif # SHIELD_DUMBPAD
