@@ -52,23 +52,24 @@
     };
 
         encoders {
-        compatible = "zmk,behavior-encoder";
-        #address-cells = <1>;
-        #size-cells = <0>;
+            #address-cells = <1>;
+            #size-cells = <0>;
 
-        encoder_1: encoder_1 {
-            gpios = <&pro_micro 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
-                    <&pro_micro 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-            label = "Encoder 1";
-            binding = <&inc_dec_volume>;
-        };
+            encoder_1: encoder1 {
+                compatible = "zmk,behavior-encoder";
+                label = "Encoder 1";
+                gpios = <&pro_micro 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
+                        <&pro_micro 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+                binding = <&inc_dec_kp &kp VOLU &kp VOLD>;  // 🔥 Fix: Add binding
+            };
 
-        encoder_2: encoder_2 {
-            gpios = <&pro_micro 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
-                    <&pro_micro 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
-            label = "Encoder 2";
-            binding = <&inc_dec_scroll>;
+            encoder_2: encoder2 {
+                compatible = "zmk,behavior-encoder";
+                label = "Encoder 2";
+                gpios = <&pro_micro 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
+                        <&pro_micro 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
+                binding = <&inc_dec_kp &kp PGUP &kp PGDN>;  // 🔥 Fix: Add binding
+            };
         };
     };
-  };
 };

@@ -31,11 +31,11 @@
         };
     };
 
-    encoder_1: encoder_1 {
+    encoder_1: encoder1 {
         binding = <&inc_dec_kp &kp VOLU &kp VOLD>;
     };
 
-    encoder_2: encoder_2 {
+    encoder_2: encoder2 {
         binding = <&inc_dec_kp &kp PGUP &kp PGDN>;
     };
 };
