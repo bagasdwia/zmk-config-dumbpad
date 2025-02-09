@@ -35,7 +35,7 @@
         };
     };
 
-    {
+/   {
     behaviors {
         inc_dec_volume: inc_dec_volume {
             compatible = "zmk,behavior-tap-hold";
