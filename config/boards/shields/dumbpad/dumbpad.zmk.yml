@@ -7,3 +7,4 @@ requires: [pro_micro]
 exposes: 
 features:
   - keys
+   - encoders
