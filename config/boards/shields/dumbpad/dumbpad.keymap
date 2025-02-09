@@ -32,10 +32,10 @@
     };
 
     encoder_1: encoder_1 {
-        binding = <&inc_dec_volume>;
+        binding = <&inc_dec_kp &kp VOLU &kp VOLD>;
     };
 
     encoder_2: encoder_2 {
-        binding = <&inc_dec_scroll>;
+        binding = <&inc_dec_kp &kp PGUP &kp PGDN>;
     };
 };

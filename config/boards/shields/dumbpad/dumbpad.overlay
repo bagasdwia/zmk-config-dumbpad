@@ -34,6 +34,23 @@
           ;
     
     };
+
+    {
+    behaviors {
+        inc_dec_volume: inc_dec_volume {
+            compatible = "zmk,behavior-tap-hold";
+            label = "Increase/Decrease Volume";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+        scroll_behavior: scroll_behavior {
+            compatible = "zmk,behavior-tap-hold";
+            label = "Scroll Up/Down";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+    };
+
         encoders {
         compatible = "zmk,behavior-encoder";
         #address-cells = <1>;
@@ -53,5 +70,5 @@
             binding = <&inc_dec_scroll>;
         };
     };
-
+  };
 };
