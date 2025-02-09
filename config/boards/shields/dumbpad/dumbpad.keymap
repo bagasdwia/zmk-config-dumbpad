@@ -7,6 +7,14 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+&encoder_1 CW  = &kp VOL_UP
+&encoder_1 CCW = &kp VOL_DOWN
+&encoder_1 PRESS = &kp MUTE
+
+&encoder_2 CW  = &kp RIGHT
+&encoder_2 CCW = &kp LEFT
+&encoder_2 PRESS = &kp ENTER
+
 
 / {
         keymap {
