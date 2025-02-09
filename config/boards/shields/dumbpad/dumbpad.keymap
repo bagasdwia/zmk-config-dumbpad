@@ -17,34 +17,25 @@
                 &kp BSPC  &kp N7  &kp N8 &kp N9  
                 &kp EQUAL &kp N4  &kp N5 &kp N6  
                 &kp MINUS &kp N1  &kp N2 &kp N3  
-                &to 1 &kp ESC   &kp DOT &kp N0 &mt RSHFT RET
+                &to 1     &kp ESC  &kp DOT &kp N0 &mt RSHFT RET
             >;
-            
-            encoders = <&encoder1>, <&encoder2>;  // ADD ENCODERS TO THE KEYMAP
         };
 
         nav_layer {
             bindings = <
                 &kp N1   &kp N2   &kp N3   &kp N4
-                &kp Q    &kp W   &kp E   &kp R
-                &kp A    &kp S   &kp D   &kp F
-                &to 0 &kp ESC  &kp C   &kp B   &kp T
+                &kp Q    &kp W    &kp E    &kp R
+                &kp A    &kp S    &kp D    &kp F
+                &to 0    &kp ESC  &kp C    &kp B   &kp T
             >;
-
-            encoders = <&encoder1>, <&encoder2>;
         };
     };
 
-    // DEFINE THE ENCODERS CORRECTLY
     &encoder1 {
-        compatible = "zmk,behavior-encoder";
-        gpios = <&pro_micro 8 0>, <&pro_micro 9 0>;
         binding = <&inc_dec_volume>;
     };
 
     &encoder2 {
-        compatible = "zmk,behavior-encoder";
-        gpios = <&pro_micro 6 0>, <&pro_micro 7 0>;
         binding = <&inc_dec_scroll>;
     };
 };
