@@ -45,12 +45,13 @@
      >;    
     };
    }; 
+                {
+        &encoder1 {
+        binding = <&inc_dec_volume>;
+        };
 
-&encoder1 {
-    binding = <&inc_dec_volume>;
-};
-
-&encoder2 {
-    binding = <&inc_dec_scroll>;
-}
+        &encoder2 {
+        binding = <&inc_dec_scroll>;
+        }
  };
+};
