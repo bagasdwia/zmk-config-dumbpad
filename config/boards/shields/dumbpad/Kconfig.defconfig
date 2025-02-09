@@ -10,10 +10,6 @@ config ZMK_BEHAVIOR_ENCODER
     bool "Enable encoder support"
     default y
 
-config ZMK_BLE_HOG
-    bool "Enable BLE HID over GATT"
-    default y
-    
 if ZMK_STUDIO
 
 module = ZMK_STUDIO
@@ -99,6 +95,5 @@ config ZMK_STUDIO_RPC_TX_BUF_SIZE
     int "TX Buffer Size"
     default 64
 
-endif
-
+endif # ZMK_STUDIO
 endif # SHIELD_DUMBPAD
