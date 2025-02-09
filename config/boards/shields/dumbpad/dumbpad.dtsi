@@ -38,7 +38,7 @@
 
         encoder_2: encoder2 {
             gpios = <&pro_micro 7 GPIO_PULL_UP  GPIO_ACTIVE_LOW>,
-                    <&pro_micro 6 GPIO_PULL_UP  GPIO_ACTIVE_LOWs>;
+                    <&pro_micro 6 GPIO_PULL_UP  GPIO_ACTIVE_LOW>;
             label = "Encoder 2";
         };
     };
