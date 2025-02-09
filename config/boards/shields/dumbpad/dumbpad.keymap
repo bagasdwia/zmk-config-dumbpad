@@ -26,7 +26,7 @@
           &kp MINUS &kp N1  &kp N2 &kp N3  
     &to 1 &kp ESC   &kp DOT &kp N0 &mt RSHFT RET
    
-    >;
+     >;
         };
  
                 nav_layer {
@@ -37,12 +37,20 @@
 // |TO(0)| ESC  |  C    |   B  |   T  |
 // --------------------------------------
                          bindings = <
-          &kp 1    &kp 2   &kp 3   &kp 4
+          &kp N1   &kp N2   &kp N3   &kp N4
           &kp Q    &kp W   &kp E   &kp R
           &kp A    &kp S   &kp D   &kp F
     &to 0 &kp ESC  &kp C   &kp B   &kp T
 
-    >;    
+     >;    
     };
    }; 
+
+&encoder1 {
+    binding = <&inc_dec_volume>;
+};
+
+&encoder2 {
+    binding = <&inc_dec_scroll>;
+}
  };
