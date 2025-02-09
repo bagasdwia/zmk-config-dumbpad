@@ -45,7 +45,7 @@
      >;    
     };
    }; 
-                {
+             
         &encoder1 {
         binding = <&inc_dec_volume>;
         };
@@ -54,4 +54,3 @@
         binding = <&inc_dec_scroll>;
         }
  };
-};
