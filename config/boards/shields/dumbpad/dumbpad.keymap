@@ -52,5 +52,6 @@
 
         &encoder2 {
         binding = <&inc_dec_scroll>;
-        }
- };
+        };
+  };        
+
