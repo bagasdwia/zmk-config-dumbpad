@@ -3,63 +3,48 @@
  *
  * SPDX-License-Identifier: MIT
  */
- 
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
-&encoder_1 CW  = &kp VOL_UP
-&encoder_1 CCW = &kp VOL_DOWN
-&encoder_1 PRESS = &kp MUTE
-
-&encoder_2 CW  = &kp RIGHT
-&encoder_2 CCW = &kp LEFT
-&encoder_2 PRESS = &kp ENTER
-
-
-/ {
-        keymap {
-                compatible = "zmk,keymap";
-
-// ---------------------------------------
-//          BSPC |  7    |  8  |  9   | 
-//          EQUAL|  4    |  5  |  6   | 
-//          MINUs|  1    |  2  |  3   |      
-// | TO(1) | ESC |  0    |  .  | ENT  |
-// ---------------------------------------
-
-                default_layer {
-                        bindings = <
-          &kp BSPC  &kp N7  &kp N8 &kp N9  
-          &kp EQUAL &kp N4  &kp N5 &kp N6  
-          &kp MINUS &kp N1  &kp N2 &kp N3  
-    &to 1 &kp ESC   &kp DOT &kp N0 &mt RSHFT RET
-   
-     >;
-        };
  
-                nav_layer {
-// --------------------------------------
-//       | 1    |  2    |   3  |   4  |
-//       | Q    |  W    |   E  |   R  |
-//       | A    |  S    |   D  |   F  |       
-// |TO(0)| ESC  |  C    |   B  |   T  |
-// --------------------------------------
-                         bindings = <
-          &kp N1   &kp N2   &kp N3   &kp N4
-          &kp Q    &kp W   &kp E   &kp R
-          &kp A    &kp S   &kp D   &kp F
-    &to 0 &kp ESC  &kp C   &kp B   &kp T
+/ {
+    keymap {
+        compatible = "zmk,keymap";
 
-     >;    
+        default_layer {
+            bindings = <
+                &kp BSPC  &kp N7  &kp N8 &kp N9  
+                &kp EQUAL &kp N4  &kp N5 &kp N6  
+                &kp MINUS &kp N1  &kp N2 &kp N3  
+                &to 1 &kp ESC   &kp DOT &kp N0 &mt RSHFT RET
+            >;
+            
+            encoders = <&encoder1>, <&encoder2>;  // ADD ENCODERS TO THE KEYMAP
+        };
+
+        nav_layer {
+            bindings = <
+                &kp N1   &kp N2   &kp N3   &kp N4
+                &kp Q    &kp W   &kp E   &kp R
+                &kp A    &kp S   &kp D   &kp F
+                &to 0 &kp ESC  &kp C   &kp B   &kp T
+            >;
+
+            encoders = <&encoder1>, <&encoder2>;
+        };
     };
-   }; 
-             
-        &encoder1 {
+
+    // DEFINE THE ENCODERS CORRECTLY
+    &encoder1 {
+        compatible = "zmk,behavior-encoder";
+        gpios = <&pro_micro 8 0>, <&pro_micro 9 0>;
         binding = <&inc_dec_volume>;
-        };
+    };
 
-        &encoder2 {
+    &encoder2 {
+        compatible = "zmk,behavior-encoder";
+        gpios = <&pro_micro 6 0>, <&pro_micro 7 0>;
         binding = <&inc_dec_scroll>;
-        };
-  };        
-
+    };
+};
