@@ -35,11 +35,12 @@
           ;
         };
     
-    &encoder_left {
+   &left_encoder {
 	status = "okay";
     };
 
-    &encoder_right {
+    &right_encoder {
 	status = "okay";
     };
+
 };
