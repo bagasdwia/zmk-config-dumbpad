@@ -6,11 +6,4 @@ if SHIELD_DUMBPAD
 config ZMK_KEYBOARD_NAME
     default "dumbpad"
 
-config ZMK_BEHAVIOR_ENCODER
-    bool "Enable encoder support"
-    default y
-
-
-endif
-
 endif #SHIELD_DUMBPAD
