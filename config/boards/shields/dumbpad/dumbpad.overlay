@@ -31,22 +31,23 @@
             <&gpio0 19 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>,
             <&gpio0 18 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>;
     };
+};
 
-    &encoder_left {
-        compatible = "alps,ec11";
-        label = "LEFT_ENCODER";
-        resolution = <4>;
-        status = "okay";
-        a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    };
+// ✅ Encoder fragments are now outside the root node
+&encoder_left {
+    compatible = "alps,ec11";
+    label = "LEFT_ENCODER";
+    resolution = <4>;
+    status = "okay";
+    a-gpios = <&gpio0 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&gpio0 8 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+};
 
-    &encoder_right {
-        compatible = "alps,ec11";
-        label = "RIGHT_ENCODER";
-        resolution = <4>;
-        status = "okay";
-        a-gpios = <&gpio0 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-        b-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
-    };
+&encoder_right {
+    compatible = "alps,ec11";
+    label = "RIGHT_ENCODER";
+    resolution = <4>;
+    status = "okay";
+    a-gpios = <&gpio0 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+    b-gpios = <&gpio0 6 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
 };
