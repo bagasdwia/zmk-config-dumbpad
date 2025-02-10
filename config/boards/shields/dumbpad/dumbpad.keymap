@@ -32,14 +32,9 @@
         };
     };
 
-    encoders {
-        compatible = "zmk,encoders";    
-    encoder_1: encoder1 {
-        zmk,bindings = <&inc_dec_kp &kp VOLU &kp VOLD>;
+    &left_encoder {
+	a-gpios = <&pro_micro 9 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
+	b-gpios = <&pro_micro 5 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
     };
 
-    encoder_2: encoder2 {
-        zmk,bindings = <&inc_dec_kp &kp PGUP &kp PGDN>;
-    };
-  };
 };
