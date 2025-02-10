@@ -38,4 +38,8 @@
     &left_encoder {
 	status = "okay";
     };
+
+    &right_encoder {
+	status = "okay";
+    };
 };
