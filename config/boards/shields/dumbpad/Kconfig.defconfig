@@ -6,19 +6,4 @@ if SHIELD_DUMBPAD
 config ZMK_KEYBOARD_NAME
     default "dumbpad"
 
-config ZMK_BEHAVIOR_ENCODER
-    bool "Enable encoder support"
-    default y
-
-if ZMK_STUDIO
-
-module = ZMK_STUDIO
-module-str = zmk_studio
-source "subsys/logging/Kconfig.template.log_config"
-
-menuconfig ZMK_STUDIO_LOCKING
-    bool "Lock Support"
-
-endif
-
 endif #SHIELD_DUMBPAD
