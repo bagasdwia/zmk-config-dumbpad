@@ -74,7 +74,9 @@
 
     sensors {
         compatible = "zmk,keymap-sensors";
-        
+        default_layer {
+    bindings = < ... >;
+    sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>; };
         encoder_left: encoder_left {
             compatible = "alps,ec11";
             label = "LEFT_ENCODER";
@@ -83,7 +85,9 @@
             resolution = <4>;
         };
 
-        encoder_right: encoder_right {
+        encoder_right: encoder_right {nav_layer {
+    bindings = < ... >;
+    sensor-bindings = <&inc_dec_kp PG_UP PG_DN>;};
             compatible = "alps,ec11";
             label = "RIGHT_ENCODER";
             a-gpios = <&gpio0 7 (GPIO_ACTIVE_HIGH | GPIO_PULL_UP)>;
