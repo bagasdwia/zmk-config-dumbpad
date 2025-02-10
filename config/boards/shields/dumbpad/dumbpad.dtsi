@@ -36,7 +36,7 @@
         encoder_1: encoder1 {
             compatible = "zmk,behavior-encoder";
             gpios = <&pro_micro 8 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
-                    <&pro_micro 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
+                    <&pro_micro GND (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
                     <&pro_micro 9 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
             label = "Encoder 1";
         };
@@ -44,7 +44,7 @@
         encoder_2: encoder2 {
             compatible = "zmk,behavior-encoder";
             gpios = <&pro_micro 6 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
-                    <&pro_micro 5 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
+                    <&pro_micro GND (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>,
                     <&pro_micro 7 (GPIO_PULL_UP | GPIO_ACTIVE_LOW)>;
             label = "Encoder 2";
         };
